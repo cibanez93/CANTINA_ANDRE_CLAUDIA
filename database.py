@@ -11,7 +11,7 @@ def crear_usuario(nombre,apellido,correo_electronico,contraseña):
     except sqlite3.Integrity.Error: 
         return False #Significa para indicarle que salio todo mal!!!
 
-def modificar_usuario(id_usuario,nombre,apellido,correo_electronico,contraseña)
+def modificar_usuario(id_usuario,nombre,apellido,correo_electronico,contraseña):
     try:
         cursor.execute("UPDATE usuarios SET id nombre=?,apellido=?,correo_electronico=?,contraseña=? WHERE id = ?")
         conn.commit() # confirmar la conexión

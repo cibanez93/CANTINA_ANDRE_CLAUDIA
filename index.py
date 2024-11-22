@@ -212,12 +212,18 @@ class App(customtkinter.CTk):
                                  padx=20)
         
         perfil_image = customtkinter.CTkImage(Image.open("img/perfil.png"),
-                                               size=(400, 200))    
+                                               size=(50,50))    
         self.mostrar_perfil_button=customtkinter.CTkButton(self.cantina_frame,
-                                                           text="",
-                                                           image=perfil_image,
-                                                           corner_radius=50)
-        self.mostrar_perfil_button.place(x=600,y=300)
+                                                           text="👤",
+                                                           font=(self.tamaño_h1,30),
+                                                           corner_radius=25,
+                                                           border_width=1,
+                                                           fg_color=self.blanco,
+                                                           border_color=self.negro,
+                                                           bg_color=self.blanco,
+                                                           width=25,
+                                                           height=25)
+        self.mostrar_perfil_button.place(x=1090,y=10)
 
 
         #boton 1 silla redonda blanca 
