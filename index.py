@@ -348,30 +348,21 @@ class App(customtkinter.CTk):
 
         self.popup.geometry(f"{window_width}x{window_height}+{position_x}+{position_y}")
 
-        horas_frame = customtkinter.CTkFrame(self.popup, fg_color=self.blanco)
-        horas_frame.pack(pady=10, padx=20, fill="x", expand=True)
-
-        horas = ["13:30", "14:00", "14:30", "15:00", "15:30", "16:00"]
-        for hora in horas:
-            hora_button = customtkinter.CTkButton(horas_frame,
-                                                  text=hora,
-                                                  fg_color=self.beige,
-                                                  width=80,
-                                                  height=40)
-            hora_button.pack(side="left", padx=5)
-
-        detalles_frame = customtkinter.CTkFrame(self.popup,
+        self.reservar_detalle = customtkinter.CTkFrame(self.popup,
                                                 fg_color=self.blanco)
-        detalles_frame.pack(pady=20,
-                            padx=20,
-                            fill="both",
-                            expand=True)
+        self.reservar_detalle.pack(pady=20,
+                                  padx=20,
+                                  fill="both",
+                                  expand=True)
+        
+        self.horas_label=customtkinter.CTkLabel(self.reservar_detalle,text="Horas",text_color=self.negro,font=(self.fuente_h1,self.tamaño_h1))
+        self.horas_label.pack(pady=20,padx=20)
+        
+        self.horas_entry=customtkinter.CTkOptionMenu(self.reservar_detalle,values=["13:30 - 14:00","14:00 - 14:30","14:30 - 15:00","15:00 - 15:30"])
+        self.horas_entry.pack(pady=0,padx=0)
 
-        servicio_label = customtkinter.CTkLabel(detalles_frame,
-                                                text="Manicura La Zorra",
-                                                font=(self.fuente_h1, 16),
-                                                text_color=self.negro)
-        servicio_label.pack(pady=10)
+        self.aceptar_reserva_button=customtkinter.CTkButton(self.reservar_detalle,text="Aceptar reserva",font=(self.fuente_h1,self.tamaño_h2))
+        self.aceptar_reserva_button.pack(pady=20,padx=0)
 
         usuario_label = customtkinter.CTkLabel(detalles_frame,
                                                text="Usuario",
