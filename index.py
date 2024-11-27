@@ -25,6 +25,7 @@ class App(customtkinter.CTk):
         self.gris = "#5F5F5F"
         self.naranja_oscuro ="#BB794E"
         self.gris_oscuro="#404040"
+        self.gris_ultra_oscuro="#242424"
         self.fuente_h1 = "Optima"
         self.tamaño_h1 = 20
         self.tamaño_h2 = 15
@@ -196,12 +197,12 @@ class App(customtkinter.CTk):
 
       def mostrar_cantina(self):    
 
-        self.cantina_frame = customtkinter.CTkFrame(self,bg_color=self.gris_oscuro)
-        self.cantina_frame.pack(pady=20, 
-                                padx=20)
+        self.cantina_frame = customtkinter.CTkFrame(self,bg_color=self.gris_oscuro,width=1250,height=750)
+        self.cantina_frame.pack(pady=40, 
+                                padx=40)
 
         cantina_image = customtkinter.CTkImage(Image.open("img/plano.png"),
-                                               size=(1800, 950))
+                                               size=(1120,640))
         self.logo_label = customtkinter.CTkLabel(self.cantina_frame, 
                                                 image=cantina_image, 
                                                 text="",
@@ -238,12 +239,13 @@ class App(customtkinter.CTk):
                                                    self.tamaño_h1),corner_radius=30,
                                                    fg_color=self.gris_oscuro,
                                                    border_color=self.blanco,
-                                                   border_width=2,
+                                                   bg_color=self.gris_oscuro,
+                                                   border_width=4,
                                                    width=70,
                                                    height=70,
                                                    command=self.reservar)
-        self.sitio1_button.place(x=330,
-                                 y=100)
+        self.sitio1_button.place(x=250,
+                                 y=90)
 
         #boton 2  silla redonda blanca
         self.sitio2_button=customtkinter.CTkButton(self,
@@ -253,12 +255,13 @@ class App(customtkinter.CTk):
                                                    corner_radius=30,
                                                    fg_color=self.gris_oscuro,
                                                    border_color=self.blanco,
-                                                   border_width=2,
+                                                   bg_color=self.gris_oscuro,
+                                                   border_width=4,
                                                    width=70,
                                                    height=70,
                                                    command=self.reservar)
-        self.sitio2_button.place(x=190,
-                                 y=238)
+        self.sitio2_button.place(x=100,
+                                 y=225)
 
         #boton 3  silla redonda blanca 
         self.sitio3_button=customtkinter.CTkButton(self,
@@ -268,11 +271,12 @@ class App(customtkinter.CTk):
                                                    corner_radius=30,
                                                    fg_color=self.gris_oscuro,
                                                    border_color=self.blanco,
-                                                   border_width=2,
+                                                   bg_color=self.gris_oscuro,
+                                                   border_width=4,
                                                    width=70,
                                                    height=70,
                                                    command=self.reservar)
-        self.sitio3_button.place(x=990,
+        self.sitio3_button.place(x=1050,
                                  y=340)
 
         #boton 4 silla 1 marron
@@ -281,14 +285,15 @@ class App(customtkinter.CTk):
                                                    text_color=self.blanco,
                                                    font=(self.fuente_h1,self.tamaño_h1),
                                                    corner_radius=10,
-                                                   fg_color=self.beige,
+                                                   fg_color=self.gris_oscuro,
                                                    border_color=self.blanco,
-                                                   border_width=2,
+                                                   bg_color=self.gris_oscuro,
+                                                   border_width=4,
                                                    width=80,
                                                    height=80,
                                                    command=self.reservar)
-        self.sitio4_button.place(x=736,
-                                 y=123)
+        self.sitio4_button.place(x=800,
+                                 y=85)
         
 
         #boton 5 silla 2 marron
@@ -297,14 +302,15 @@ class App(customtkinter.CTk):
                                                    text_color=self.blanco,
                                                    font=(self.fuente_h1,self.tamaño_h1),
                                                    corner_radius=10,
-                                                   fg_color=self.beige,
+                                                   fg_color=self.gris_oscuro,
                                                    border_color=self.blanco,
-                                                   border_width=2,
+                                                   bg_color=self.gris_oscuro,
+                                                   border_width=4,
                                                    width=80,
                                                    height=80,
                                                    command=self.reservar)
-        self.sitio5_button.place(x=735,
-                                 y=235)
+        self.sitio5_button.place(x=800,
+                                 y=227)
 
         #boton 6 silla 3 marron
         self.sitio6_button=customtkinter.CTkButton(self,
@@ -313,14 +319,15 @@ class App(customtkinter.CTk):
                                                    font=(self.fuente_h1, 
                                                    self.tamaño_h1),
                                                    corner_radius=10,
-                                                   fg_color=self.beige,
+                                                   fg_color=self.gris_oscuro,
                                                    border_color=self.blanco,
-                                                   border_width=2,
+                                                   bg_color=self.gris_oscuro,
+                                                   border_width=4,
                                                    width=80,
                                                    height=80,
                                                    command=self.reservar)
-        self.sitio6_button.place(x=480,
-                                 y=123)
+        self.sitio6_button.place(x=429,
+                                 y=85)
 
         #boton 7 silla 4 marron
         self.sitio7_button=customtkinter.CTkButton(self,text="7",
@@ -328,14 +335,15 @@ class App(customtkinter.CTk):
                                                    font=(self.fuente_h1,
                                                    self.tamaño_h1),
                                                    corner_radius=10,
-                                                   fg_color=self.beige,
+                                                   fg_color=self.gris_oscuro,
                                                    border_color=self.blanco,
-                                                   border_width=2,
+                                                   bg_color=self.gris_oscuro,
+                                                   border_width=4,
                                                    width=80,
                                                    height=80,
                                                    command=self.reservar)
-        self.sitio7_button.place(x=480,
-                                    y=235) 
+        self.sitio7_button.place(x=429,
+                                 y=227) 
 
       def reservar(self):
         self.popup = customtkinter.CTkToplevel(self)
