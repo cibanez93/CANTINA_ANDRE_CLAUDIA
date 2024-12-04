@@ -35,7 +35,7 @@ def crear_reservar(id_usuario,fecha,hora,silla):
     except sqlite3.Integrity.Error:
         return False 
 
-def modificar_reservar(id_reserva,hora,silla):
+def modificar_reserva(id_reserva,hora,silla):
     try:
         cursor.execute("UPDATE reservas SET hora=?,silla=? WHERE id = ?")
         conn.commit()
